@@ -12,7 +12,7 @@ response_dict = r.json()
 
 # Output the results
 # uncomment below for initial display test
-### print(response_dict.keys())
+##print(response_dict.keys())
 
 print("Total repos: ", response_dict['total_count'])
 
@@ -23,6 +23,11 @@ print("Repos returned: ", len(repo_dictionaries))
 # Refined look
 # Check out the first repository
 repo_dictionary = repo_dictionaries[0]
-print("\nKeys: ", len(repo_dictionary))
-for key in sorted(repo_dictionary.keys()):
-    print(key)
+##print("\nKeys: ", len(repo_dictionary))
+##for key in sorted(repo_dictionary.keys()):
+##    print(key)
+print("\nSelected info about first repo:")
+print('Name: ', repo_dictionary['name'])
+print('Owner: ', repo_dictionary['owner']['login'])
+print('Stars: ', repo_dictionary['stargazers_count'])
+print('Description: ', repo_dictionary['description'])
